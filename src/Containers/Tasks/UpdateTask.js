@@ -48,7 +48,14 @@ class UpdateTask extends React.Component {
 
         let { users, user, loading, task } = this.props;
         const user_id = user && user.id ? user.id : null
-
+        const statusArr =[
+            {id:1,name:'To Do'},
+            {id:2,name:'In Progress'},
+            {id:3,name:'In QA'},
+            {id:4,name:'Done'},
+            {id:5,name:'Deployed'},
+            {id:6,name:'Blocked'},
+        ]
 
         return (
 
@@ -71,6 +78,7 @@ class UpdateTask extends React.Component {
                                     description: task ? task.description : '',
                                     created_by: user_id,
                                     assigned_to: task ? task.assigned_to : '',
+                                    status:task ?  task.status:''
                                 }}
                                 onFinish={this.onFinish}
                             >
@@ -114,6 +122,20 @@ class UpdateTask extends React.Component {
                                                     required>
                                                     <Select style={{ width: 250 }} placeholder="Assign To">
                                                         {users.map(u => <Option key={u.id} disabled={u.id === user_id} value={u.id}>{u.name}</Option>)}
+                                                    </Select>
+                                                </Form.Item>
+
+                                            </div>
+                                            <div className="form-group ">
+                                                <Form.Item label="Status" labelCol={{ span: 8 }} name="status" labelAlign="left" colon={false}
+                                                    hasFeedback
+                                                    rules={[{
+                                                        required: true,
+                                                        message: 'Status is required'
+                                                    }]}
+                                                    required>
+                                                    <Select style={{ width: 250 }} placeholder="Status">
+                                                        {statusArr.map(u => <Option key={u.id}  value={u.name}>{u.name}</Option>)}
                                                     </Select>
                                                 </Form.Item>
 
