@@ -47,3 +47,10 @@ export const  getUsers = () => {
             });
     }
 }
+export const doLogout = () => {
+    return dispatch => {
+        localStorage.clear()
+        dispatch(setAuth(false));
+        dispatch(setUser(undefined));
+    }
+}

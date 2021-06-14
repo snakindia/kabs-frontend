@@ -3,10 +3,11 @@ import { notification } from 'antd';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom';
 import { Popconfirm, } from 'antd';
+import {doLogout} from './store/Actions'
 const HeaderBar = (props) => {
     const logout = (e) => {
         e.preventDefault();
-        props.logout()
+        props.doLogout()
     }
    
     const { pathname } = props.location;
@@ -93,6 +94,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+    doLogout:()=>dispatch(doLogout())
 });
 
 export default withRouter(connect(

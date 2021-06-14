@@ -26,10 +26,3 @@ export const doLogin = (payload) => {
     }
 }
 
-export const doLogout = () => {
-    return dispatch => {
-        localStorage.clear()
-        dispatch(setAuth(false));
-        dispatch(setUser(undefined));
-    }
-}
