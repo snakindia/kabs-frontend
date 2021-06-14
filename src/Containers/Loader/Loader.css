@@ -1,0 +1,39 @@
+/* .loader-container {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 2147483647;
+    background-color: rgba(255,255,255,0.7);
+    .loader {
+       // width: 100px;
+        height: 40px;
+        position: absolute;
+        left: calc(50% - 50px);
+        top: calc(50% - 50px);
+    }
+}
+*/
+.loader-container {
+    background-color: rgba(255,255,255,0.7);
+    position: fixed;
+    width: 100%;
+    z-index: 2147483647;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    
+}
+.loader-container .loader {
+    position: absolute;
+    z-index: 999;
+    overflow: visible;
+    margin: auto;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    top: calc(50% - 50px);
+    left: calc(50% - 10px);
+}

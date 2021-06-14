@@ -1,0 +1,57 @@
+.loginContainer {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../assets/img/17.jpeg');
+    overflow-y: hidden;
+    height: 100vh;
+   
+}
+
+.forgot-content{max-width: 400px;margin: 172px auto;}
+
+.cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(117, 54, 230, .1);
+}
+
+.login-content {
+    max-width: 400px;
+    margin: 130px auto 120px;
+}
+
+
+
+
+.auth-head-icon {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: #fff;
+    color: #5c6bc0;
+    box-shadow: 0 5px 20px #d6dee4;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+@media(max-width:768px){
+    .loginContainer, .forgotContainer {padding:0 1rem;}
+    .login-content { margin:150px auto 130px;}
+    .cover{height: 100%;}
+    .ibox .ibox-body{padding: 0 25px 20px !important;}
+}
+
+@media(min-width:2560px){
+    .login-content {
+        max-width: 400px;
+        margin: 400px auto 350px;
+    }
+}
