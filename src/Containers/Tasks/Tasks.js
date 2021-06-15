@@ -15,8 +15,8 @@ const Tasks = (props) => {
         <div className="tc" >
         <div className="page-content fade-in-up pt-0">
           <div className="ibox">
-            <div className="ibox-body">
-              <div id="plotter" className="mt-0">
+            <div className="ibox-body" style={{marginTop:50}}>
+              <div id="plotter" className="mt-0" >
               <Plotter
                
                 loading={loading} data={data}
