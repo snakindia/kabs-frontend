@@ -77,7 +77,7 @@ class UpdateTask extends React.Component {
                                     title: task ? task.title : '',
                                     description: task ? task.description : '',
                                     created_by: user_id,
-                                    assigned_to: task ? task.assigned_to : '',
+                                    assigned_to: task ? task.assigned_to_id : '',
                                     status:task ?  task.status:''
                                 }}
                                 onFinish={this.onFinish}
